@@ -1,13 +1,17 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
     <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="./prices.css">
   </head>
   <body>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0&appId=142117212116406"></script>
     <a href="#main" class="skip-link">Skip to main content</a>
     <header>
       <div class="container">
-        <h1>Keymi.Space</h1>
+        <h1>Keymi</h1>
         <h2>Your key, your link, your story</h2>
         <a href="#contact" class="link-github"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
               <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
@@ -16,62 +20,204 @@
           ORDER NOW</a>
       </div>
     </header>
+    </main>
+    <main id="main" tabIndex="-1">
+      <div class="container">
+        <article id="about">
+          <section class="container">
+            <h2>CONFESSION SECTION</h2>
+            <p>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+            </p>
+          </section>
+          <section class="container">
+            <h2>SAY OUT LOUD!</h2>
+            <blockquote>
+              <p>
+                <strong>PREMIUM:</strong> 
+                <a>SHOUT OUT KAY HAROLD ABRINA, RENZ GAB, CHATGPT, AT SA INYO LAHAT, SIKAT NA KAYO!</a> 
+              </p>
+            </blockquote>
+            <ul>
+              <li>Hi Harold</li>
+              <li>Hi Rey</li>
+              <li>Hi Gab</li>
+              <li>Hello Sainyo</li>
+              <li>Shawart</li>
+              <li>Hi Harold</li>
+              <li>Hi Rey</li>
+              <li>Hi Gab</li>
+              <li>Hello Sainyo</li>
+              <li>Shawart</li>
+              <li>Hi Harold</li>
+              <li>Hi Rey</li>
+              <li>Hi Gab</li>
+              <li>Hello Sainyo</li>
+              <li>Shawart</li>
+              <li>Testing lang po ito</li>
+              <li>Anong tawag sa key- huwag na pala</li>
+            </ul>
+          </section>
+          <center>
+              <form id="contactForm">
+
+                  <textarea id="message" name="message" placeholder="Input your message, it will appear in the bubble chat section after reviewing." rows="4"></textarea>
+
+
+                  <button class="btnWrpY" type="button" id="sendMessenger">Send via Messenger</button><br><br>
+                  <button class="btnWrpY" type="submit">Send via Email</button>
+              </form>
+                </center>
+              <p id="responseMessage" class="txtWrpZ" style="color: green;"></p>
+          </div>
+        </article>
+        <main id="main" tabIndex="-1">
+          <article id="order-keymi">
+            <section class="container">
+              <h3>Steps on how to order!</h3>
+              <ol>
+                <li>
+                  Find your <a href="#">product</a>, make sure to take note which set it is
+                </li>
+                <li>
+                  After finding your product, proceed to the <a href="#">order</a> section.
+                </li>
+              </ol>
+            </section>
+            <footer id="files">
+              <div class="container">
+              </div>
+            </footer>
+          </article>
+        </div>
     <article id="contact">
       <aside id="styles">
-              <div class="boxWrpX">
-                  <h2>Submit An Order</h2>
-                  <form id="contactForm">
-                      <input type="text" id="name" name="name" placeholder="Your Name" required>
-                      <input type="email" id="email" name="email" placeholder="Your Email" required>
-                      <select id="dropdown" name="dropdown" required>
-                          <option value="Set 1">Set 1</option>
-                          <option value="Set 2">Set 2</option>
-                          <option value="Set 3">Set 3</option>
-                      </select>
-                    <input type="file" id="attachment" name="attachment">
-                      <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
-                      <button class="btnWrpY" type="submit">Send</button>
-                  </form>
-                  <p id="responseMessage" class="txtWrpZ" style="color: green;"></p>
-              </div>
+        <div class="boxWrpX">
+            <h2>Order Now</h2>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <select id="dropdown" name="dropdown" required>
+                    <option value="Set 1">Set 1</option>
+                    <option value="Set 2">Set 2</option>
+                    <option value="Set 3">Set 3</option>
+                   <option value="Set 4">Set 4</option>
+                   <option value="Set 5">Set 5</option>
+                   <option value="Set 6">Set 6</option>
+                </select>
+                <textarea id="message" name="message" placeholder="Your Message" rows="4"></textarea>
+
+                <!-- Attachment input -->
+                <input type="file" id="attachment" name="attachment" multiple>
+
+                <button class="btnWrpY" type="button" id="sendMessenger">Send via Messenger</button><br><br>
+                <button class="btnWrpY" type="submit">Send via Email</button>
+            </form>
+            <p id="responseMessage" class="txtWrpZ" style="color: green;"></p>
+        </div>
             </li>
           </ul>
 
         </div>
       </aside>
       </article>
-    <main id="main" tabIndex="-1">
-        <article id="order-keymi">
-          <section class="container">
-            <h3>Steps on how to order!</h3>
-            <ol>
-              <li>
-                Find your <a href="#">product</a>, make sure to take note which set it is
-              </li>
-              <li>
-                After finding your product, proceed to the <a href="#">order</a> section.
-              </li>
-            </ol>
-          </section>
-          <footer id="files">
-            <div class="container">
-            </div>
-          </footer>
-        </article>
+    <section class="service-cards">
+      <h3>Our Keychain Products</h3>
+      <p class="section-lead">If you have any question or inquiry kindly contact us!</p>
+      <div class="services-grid">
+        <div class="service service1">
+          <i class="ti-bar-chart"></i>
+          <h4>SET 1</h4>
+          <p>Back-to-Back Picture</p>
+          <p>Feature your most cherished photos.  </p>
+          <a id="contact" href="#contact" class="cta">ORDER <span class="ti-angle-right"></a>
+        </div>
+
+        <div class="service service2">
+          <i class="ti-light-bulb"></i>
+          <h4>SET 2</h4>
+          <p>Back-to-Back Spotify Scannable</p>
+          <p>Scan and listen to your favorite song anytime, anywhere!</p>
+          <a id="contact" href="#contact" class="cta">ORDER <span class="ti-angle-right"></a>
+          </div>
+
+        <div class="service service3">
+          <i class="ti-money"></i>
+          <h4>SET 3</h4>
+          <p>Picture + QR to Social Media</p>
+          <p>Share your socials instantly with a quick scan.  </p>
+          <a id="contact" href="#contact" class="cta">ORDER <span class="ti-angle-right"></a>
+          </div>
       </div>
-    </main>
-    
+      <section class="service-cards">
+        <div class="services-grid">
+          <div class="service service1">
+            <i class="ti-bar-chart"></i>
+            <h4>SET 4</h4>
+            <p>Picture + QR to Website (Collage)</p>
+            <p>Keep multiple photos in one place and access them with a single scan.</p>
+            <bR>
+          </bR>
+            <a id="contact" href="#contact" class="cta">ORDER <span class="ti-angle-right"></a>
+            </div>
+
+          <div class="service service2">
+            <i class="ti-light-bulb"></i>
+            <h4>SET 5</h4>
+            <p>Special Picture + QR to Website (Collage + Message)</p>
+            <p>A personalized keychain with a heartfelt message alongside your collage.  </p>
+            <a id="contact" href="#contact" class="cta">ORDER <span class="ti-angle-right"></a>
+            </div>
+          <div class="service service3">
+            <i class="ti-money"></i>
+            <h4>SET 6</h4>
+            <p>Special Picture + QR to Website (Collage + Message)</p>
+            <p>Freedom of putting whatever you like in the keychain</p>
+            <a id="contact" href="#contact" class="cta">ORDER <span class="ti-angle-right"></a>
+            </div>
+        </div>
+    </section>
     <script>
+        document.getElementById('sendMessenger').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value || "No message provided";
+            const files = document.getElementById('attachment').files;
+
+            // Validate image count (if images are uploaded)
+            let imageCount = 0;
+            for (let i = 0; i < files.length; i++) {
+                if (files[i].type.startsWith("image/")) {
+                    imageCount++;
+                }
+            }
+            if (imageCount > 10) {
+                alert("You can upload up to 10 images only.");
+                return;
+            }
+
+            const fbMessengerLink = `https://m.me/61573048131824?text=${encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+            )}`;
+
+            window.location.href = fbMessengerLink;
+        });
+
         document.getElementById('contactForm').addEventListener('submit', async function(event) {
             event.preventDefault();
+
             const formData = new FormData(this);
             const response = await fetch("https://formspree.io/f/xnnjzbod", {
                 method: "POST",
                 body: formData,
                 headers: { 'Accept': 'application/json' }
             });
+
             if (response.ok) {
-                document.getElementById('responseMessage').textContent = "Message sent successfully!";
+                document.getElementById('responseMessage').textContent = "Message sent successfully via Email!";
                 this.reset();
             } else {
                 document.getElementById('responseMessage').textContent = "Something went wrong!";
