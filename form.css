@@ -1,0 +1,82 @@
+.boxWrpX {
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid black;
+    border-radius: 8px;
+    box-shadow: 8px 8px 0px black;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 3px solid black;
+    background: white;
+    font-size: 16px;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btnWrpY {
+    width: 100%;
+    padding: 14px;
+    background: #ff304f;
+    color: white;
+    border: 3px solid black;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0px black;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btnWrpY:hover {
+    background: #d62839;
+    transform: translateY(-2px);
+}
+
+.txtWrpZ {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Mobile-Friendly Adjustments */
+@media screen and (max-width: 480px) {
+    .boxWrpX {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input, textarea, select {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btnWrpY {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
