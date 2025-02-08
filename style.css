@@ -657,3 +657,35 @@ nav ul a:focus,
   stroke: var(--color-black);
   stroke-width: 3px;
 }
+.marquee-container {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  border: 4px solid black;
+  padding: 10px;
+  background: white;
+  box-shadow: 8px 8px 0px black;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 20px;
+  min-width: 100%;
+  animation: scroll 8s linear infinite;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #ff304f;
+  color: white;
+  border: 3px solid black;
+  box-shadow: 4px 4px 0px black;
+}
+
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
