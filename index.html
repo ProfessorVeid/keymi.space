@@ -97,28 +97,49 @@
       <aside id="styles">
         <div class="boxWrpX">
             <h2>Order Now</h2>
-          <form id="orderForm" action="https://formspree.io/f/xnnjzbod" method="POST" enctype="multipart/form-data">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
+      <form id="orderForm" action="https://formspree.io/f/xnnjzbod" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
 
-            <select name="product" required>
-                <option value="Set 1">Set 1</option>
-                <option value="Set 2">Set 2</option>
-                <option value="Set 3">Set 3</option>
-                <option value="Set 4">Set 4</option>
-                <option value="Set 5">Set 5</option>
-                <option value="Set 6">Set 6</option>
-            </select>
+    <select name="product" required>
+        <option value="Set 1">Set 1</option>
+        <option value="Set 2">Set 2</option>
+        <option value="Set 3">Set 3</option>
+        <option value="Set 4">Set 4</option>
+        <option value="Set 5">Set 5</option>
+        <option value="Set 6">Set 6</option>
+    </select>
 
-            <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+    <textarea name="message" placeholder="Your Message" rows="4"></textarea>
 
-            <!-- File Upload -->
-            <input type="file" name="attachment" multiple>
+    <!-- New File Upload Link Field -->
+    <input type="url" name="file_link" placeholder="Paste file link (Google Drive, Dropbox, etc.)">
 
-            <button class="btnWrpY" type="submit">Send via Email</button>
-          </form>
+    <button class="btnWrpY" type="submit">Send via Email</button>
+</form>
 
-          <p id="orderResponseMessage" class="txtWrpZ" style="color: green;"></p>
+<p id="orderResponseMessage" class="txtWrpZ" style="color: green;"></p>
+
+<script>
+    document.getElementById('orderForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const response = await fetch(this.action, {
+            method: "POST",
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            document.getElementById('orderResponseMessage').textContent = "Order placed successfully!";
+            this.reset();
+        } else {
+            document.getElementById('orderResponseMessage').textContent = "Something went wrong. Please try again.";
+        }
+    });
+</script>
+
             </li>
           </ul>
 
@@ -205,31 +226,7 @@
               }
           });
       </script>
-      <script>document.getElementById('orderForm').addEventListener('submit', async function(event) {
-    event.preventDefault();
-
-    const formData = new FormData(this);
-
-    try {
-        const response = await fetch(this.action, {
-            method: "POST",
-            body: formData
-        });
-
-        const result = await response.json();
-        if (response.ok) {
-            document.getElementById('orderResponseMessage').textContent = "Order placed successfully!";
-            this.reset();
-        } else {
-            document.getElementById('orderResponseMessage').textContent = "Error: " + (result.error || "Something went wrong.");
-        }
-    } catch (error) {
-        document.getElementById('orderResponseMessage').textContent = "Network error. Please try again.";
-    }
-});
-
-
-      </script>
+      
     
   </body>
 </html>
