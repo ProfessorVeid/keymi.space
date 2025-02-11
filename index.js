@@ -14,8 +14,8 @@ app.get('/contact', (request, response) => {
   return response.sendFile('contact.html', { root: '.' });
 });
 
-app.get('/profile', (request, response) => {
-  return response.sendFile('profile.html', { root: '.' });
+app.get('/facebook', (request, response) => {
+  return response.sendFile('https://www.facebook.com/share/1AugcfeqAA/', { root: '.' });
 });
 
 app.get('/auth/discord', (request, response) => {
