@@ -15,7 +15,7 @@ app.get('/contact', (request, response) => {
 });
 
 app.get('/facebook', (request, response) => {
-  return response.redirect('https://www.facebook.com/p/KeyMi-61573048131824/?wtsid=rdr_0rVkq5ej07N8cj2XY&from_intent_redirect=1#', { root: '.' });
+  return response.redirect('https://www.facebook.com/p/KeyMi-61573048131824/?wtsid=rdr_0rVkq5ej07N8cj2XY&from_intent_redirect=1#');
 });
 
 app.get('/auth/discord', (request, response) => {
