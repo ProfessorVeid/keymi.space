@@ -14,6 +14,10 @@ app.get('/contact', (request, response) => {
   return response.sendFile('contact.html', { root: '.' });
 });
 
+app.get('/code-fndsofeiogdfgmopkfsdopfjjeopgopdgfgrdrpdogrkr', (request, response) => {
+  return response.sendFile('web1.html', { root: '.' });
+});
+
 app.get('/facebook', (request, response) => {
   return response.redirect('https://www.facebook.com/p/KeyMi-61573048131824/?wtsid=rdr_0rVkq5ej07N8cj2XY&from_intent_redirect=1#');
 });
