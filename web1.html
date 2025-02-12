@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Letter</title>
+  <link rel="stylesheet" href="web1.css">
+</head>
+<body>
+  <div class="reveal-container">
+    <button id="reveal-button">💌 To Alexis from Janmarc 💌</button>
+    <div class="letter-container" id="letter" style="display: none;">
+      <div class="header">
+        <h1>To Alexis,</h1>
+      </div>
+      <div class="content">
+        <p>
+          Happy Valentine's Day, Alexis! It’s been quite a journey with you, filled with both hardships and fun times. We've fought, argued, recovered, and grown stronger together. I’m proud to say that you are one of the most important people in my life. 
+        </p>
+        <p class="closing">
+          I love you so much.   
+        </p>
+        <p class="signature">Yours truly, <br>Janmarc</p>
+      </div>
+    </div>
+  </div>
+  <div id="hearts-container"></div>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealButton = document.getElementById('reveal-button');
+      const letter = document.getElementById('letter');
+      const heartsContainer = document.getElementById('hearts-container');
+
+      // Function to create falling hearts
+      function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.style.left = `${Math.random() * 100}vw`;
+        heart.style.animationDuration = `${2 + Math.random() * 3}s`; // Random fall duration
+        heartsContainer.appendChild(heart);
+
+        // Remove heart after animation
+        setTimeout(() => {
+          heart.remove();
+        }, 5000);
+      }
+
+      revealButton.addEventListener('click', () => {
+        letter.style.display = 'block';
+        revealButton.style.display = 'none';
+
+        // Start falling hearts
+        setInterval(createHeart, 200);
+      });
+    });
+
+  </script>
+</body>
+</html>
 
