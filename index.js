@@ -14,7 +14,7 @@ app.get('/contact', (request, response) => {
   return response.sendFile('contact.html', { root: '.' });
 });
 
-app.get('/code-fndsofeiogdfgmopkfsdopfjjeopgopdgfgrdrpdogrkr', (request, response) => {
+app.get('/alexis', (request, response) => {
   return response.sendFile('web1.html', { root: '.' });
 });
 
