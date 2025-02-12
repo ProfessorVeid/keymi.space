@@ -10,7 +10,7 @@ app.get('/', (request, response) => {
   return response.sendFile('index.html', { root: '.' });
 });
 
-app.get('/contact', (request, response) => {
+app.get('/for-alexis-c73h1', (request, response) => {
   return response.sendFile('contact.html', { root: '.' });
 });
 
