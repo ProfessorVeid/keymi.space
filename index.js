@@ -15,7 +15,7 @@ app.get('/contact', (request, response) => {
 });
 
 app.get('/for-alexis', (request, response) => {
-  return response.sendFile('janmarc.html', { root: '.' });
+  return response.sendFile('web1.html', { root: '.' });
 });
 
 app.get('/rey', (request, response) => {
